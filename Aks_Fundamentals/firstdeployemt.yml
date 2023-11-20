@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: firstdploymet
+spec:
+  selector:
+    matchLabels:
+      app: firstdploymet
+  template:
+    metadata:
+      labels:
+        app: firstdploymet
+    spec:
+      containers:
+      - name: firstdploymet
+        image: stacksimplify/kubenginx:3.0.0
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 80
