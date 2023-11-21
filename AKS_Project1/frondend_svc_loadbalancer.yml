@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: frontend-nginxapp-loadbalancer-service
+  labels:
+    app: frontend-nginxapp
+    tier: frontend-nginxapp
+spec:
+  type: LoadBalancer
+  selector:
+    app: frontend-nginxapp
+  ports:
+  - port: 80
+    targetPort: 80
