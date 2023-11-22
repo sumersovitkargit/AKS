@@ -1,0 +1,1 @@
+![Alt text](Images/Storage_Aks.PNG)
